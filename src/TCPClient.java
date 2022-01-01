@@ -66,6 +66,8 @@ public class TCPClient extends Thread implements ActionListener, WindowListener 
 				gui.displayMessage("Connection to server lost");
 			}
 		}
+		
+		System.out.println("Thread for " + displayName + " has exited.");
 	}
 	
 	private void sendMessage(String message) {

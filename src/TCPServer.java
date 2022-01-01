@@ -7,7 +7,7 @@ import java.util.LinkedList;
 public class TCPServer extends Thread {
 	
 	private Hashtable<String, UserAgent> userList;
-	private Boolean isRunning = false;
+	private static Boolean isRunning = false;
 	private ServerSocket serverSocket;
 	
 	public TCPServer(int serverPort) {
@@ -41,6 +41,8 @@ public class TCPServer extends Thread {
 				System.err.println("Unknown connection failed to load.");
 			}
 		}
+		
+		System.out.println("Thread for server has exited.");
 	}
 
 	public void sendTell(String username, String content) {
